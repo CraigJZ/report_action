@@ -7,7 +7,7 @@ class ReportActionTest < Minitest::Test
   end
 
   def setup
-    initialize_report
+    initialize_report_action
   end
 
   def test_that_it_has_a_report

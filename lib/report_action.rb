@@ -3,7 +3,7 @@ require 'report_action/version'
 module ReportAction
   class Error < StandardError; end
 
-  def initialize_report
+  def initialize_report_action
     @report_action = {}
   end
 
