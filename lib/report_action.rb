@@ -14,8 +14,8 @@ module ReportAction
   end
 
   def build_report(process)
+    @report_body = ''
     @report_action[process].each do |group, messages|
-      @report_body = ''
       @report_body += "<h1>#{group.capitalize}</h1>"
       messages.uniq.sort.each do |message|
         @report_body += "<p>#{message}</p>"

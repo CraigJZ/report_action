@@ -52,6 +52,13 @@ class ReportActionTest < Minitest::Test
     assert_equal @report_body, '<h1>Test section two</h1><p>Test Message</p>'
   end
 
+  def test_report_body_is_generated_for_two_groups_in_a_process
+    report_item('Test Report', 'Test Group', 'Test Message')
+    report_item('Test Report', 'Test Group Two', 'Test Message Two')
+    build_report('Test Report')
+    assert_equal @report_body, '<h1>Test group</h1><p>Test Message</p><h1>Test group two</h1><p>Test Message Two</p>'
+  end
+
   def test_report_body_is_generated_for_two_processes
     report_item('Test Report', 'Test Section', 'Test Message')
     report_item('Test Report', 'Test Section', 'Test Message Two')
