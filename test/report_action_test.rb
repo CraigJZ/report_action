@@ -96,4 +96,11 @@ class ReportActionTest < Minitest::Test
     purge_report
     assert_nil @report_action
   end
+
+  def test_that_process_list_is_returned
+    report_item('Test Report', 'Test Section', 'Test Message')
+    report_item('Test Report Two', 'Test Section', 'Test Message')
+    process_list = list_report_processes
+    assert_equal process_list, ["Test Report", "Test Report Two"]
+  end
 end

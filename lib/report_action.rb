@@ -13,6 +13,10 @@ module ReportAction
     @report_action[process][group] << message
   end
 
+  def list_report_processes
+    @report_action.collect { |p| p.shift }
+  end
+
   def build_report(process)
     @report_body = ''
     @report_action[process].each do |group, messages|
