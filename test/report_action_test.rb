@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class ReportActionTest < Minitest::Test
-  include ReportAction
   def test_that_it_has_a_version_number
     refute_nil ::ReportAction::VERSION
   end
@@ -65,5 +64,4 @@ class ReportActionTest < Minitest::Test
     @my_report.report_item('Test Report', 'Test Section', 'Test Message')
     assert_equal @my_report.has_messages?("Test Report","Test Message"), false
   end
-
 end

@@ -4,7 +4,6 @@ module ReportAction
   class Error < StandardError; end
 
   class Report
-
     def initialize
       @report_action = {}
     end
@@ -22,11 +21,11 @@ module ReportAction
     def build_report(process)
       report_body = ''
       if @report_action.key?(process)
-          @report_action[process].each do |group, messages|
-            report_body += "<h1>#{group.capitalize}</h1>"
-            messages.uniq.sort.each do |message|
-              report_body += "<p>#{message}</p>"
-            end
+        @report_action[process].each do |group, messages|
+          report_body += "<h1>#{group.capitalize}</h1>"
+          messages.uniq.sort.each do |message|
+            report_body += "<p>#{message}</p>"
+          end
         end
       end
       report_body
@@ -37,7 +36,5 @@ module ReportAction
         @report_action[process].key?(group)
       end
     end
-
   end
-
 end
