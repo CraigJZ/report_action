@@ -18,6 +18,10 @@ module ReportAction
       @report_action.collect { |p| p.shift }
     end
 
+    def retrieve_report_structure
+      @report_action
+    end
+
     def build_report(process)
       report_body = ''
       if @report_action.key?(process)

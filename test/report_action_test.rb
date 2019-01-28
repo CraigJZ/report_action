@@ -51,6 +51,13 @@ class ReportActionTest < Minitest::Test
     assert_equal process_list, ["Test Report", "Test Report Two"]
   end
 
+  def test_that_report_structure_is_returned
+    @my_report.report_item('Test Report', 'Test Section', 'Test Message')
+    @my_report.report_item('Test Report Two', 'Test Section', 'Test Message')
+    structure = @my_report.retrieve_report_structure
+    assert_equal structure, "Test Report" => { "Test Section" => ["Test Message"] }, "Test Report Two" => { "Test Section" => ["Test Message"] }
+  end
+
   def test_has_messages_with_missing_process_returns_false
     refute @my_report.has_messages?("Missing Process","Missing Group")
   end
@@ -62,6 +69,6 @@ class ReportActionTest < Minitest::Test
 
   def test_has_messages_with_messages_returns_true
     @my_report.report_item('Test Report', 'Test Section', 'Test Message')
-    assert_equal @my_report.has_messages?("Test Report","Test Message"), false
+    assert @my_report.has_messages?("Test Report","Test Section")
   end
 end
