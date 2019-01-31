@@ -41,7 +41,7 @@ my_report.build_report('Full Task Report')
 ```
 which returns:
 ```html
-<h1>Tasks</h1><p>Message about task</p><p>This is a task</p><h1>Results</h1><p>These are the results.</p>"
+<h1>Tasks</h1><p>This is a task</p><p>This is another task</p><h1>Results</h1><p>This is a result.</p>
 ```
 List all processes in a report:
 ```ruby
