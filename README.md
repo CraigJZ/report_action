@@ -1,8 +1,6 @@
 # ReportAction
 
-A collection of tools for structuring and building simple reports.
-
-Please note: This gem is in the early stages of development and frequent, breaking changes are expected.
+A collection of tools for structuring and building simple html reports.
 
 ## Installation
 
@@ -22,7 +20,36 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Initializing a new report structure:
+```ruby
+my_report = ReportAction::Report.new
+```
+Adding items to a report:
+```ruby
+my_report.report_item('Full Task Report', 'Tasks', 'Message about task')
+my_report.report_item('Full Task Report', 'Tasks', 'This is a task')
+my_report.report_item('Full Task Report', 'Results', 'These are the results.')
+```
+Building a report:
+```ruby
+my_report.build_report('Full Task Report')
+```
+returns:
+```html
+<h1>Tasks</h1><p>Message about task</p><p>This is a task</p><h1>Results</h1><p>These are the results.</p>"
+```
+Listing the processes in a report:
+```ruby
+my_report.list_report_processes
+```
+Retrieving the report structure:
+```ruby
+structure = my_report.retrieve_report_structure
+```
+Checking that a report has messages for a given process and group:
+```ruby
+my_report.has_messages?('Full Task Report', 'Tasks')
+```
 
 ## Development
 
