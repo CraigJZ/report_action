@@ -1,8 +1,6 @@
 # ReportAction
 
-A collection of tools for structuring and building simple reports.
-
-Please note: This gem is in the early stages of development and frequent, breaking changes are expected.
+A collection of tools for structuring and building simple reports, which can be extracted as a structure or as text with html.
 
 ## Installation
 
@@ -22,7 +20,41 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+First, initialize a new report structure:
+```ruby
+my_report = ReportAction::Report.new
+```
+Then add items to your report using this syntax:
+```ruby
+my_report.report_item(process, group, message)
+```
+For example:
+```ruby
+my_report.report_item('Full Task Report', 'Tasks', 'This is a task')
+my_report.report_item('Full Task Report', 'Tasks', 'This is another task')
+my_report.report_item('Full Task Report', 'Results', 'This is a result.')
+my_report.report_item('User Task Report For Ralph', 'Tasks', 'This is a different task.')
+```
+Build a report for a single process as text with html headers and paragraphs:
+```ruby
+my_report.build_report('Full Task Report')
+```
+which returns:
+```html
+<h1>Tasks</h1><p>This is a task</p><p>This is another task</p><h1>Results</h1><p>This is a result.</p>
+```
+List all processes in a report:
+```ruby
+my_report.list_report_processes
+```
+Retrieve the full report structure:
+```ruby
+structure = my_report.retrieve_report_structure
+```
+See if a report has messages for a given process and group:
+```ruby
+my_report.has_messages?('Full Task Report', 'Tasks')
+```
 
 ## Development
 
