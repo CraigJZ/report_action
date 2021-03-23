@@ -1,4 +1,4 @@
-## Unreleased
+## 0.4.0
 - Remove upper limits on development dependencies
 
 ## 0.3.1
