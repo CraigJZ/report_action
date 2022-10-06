@@ -1,5 +1,7 @@
 # ReportAction
 
+![tests](https://github.com/CraigJZ/report_action/workflows/test_suite/badge.svg)
+
 A collection of tools for structuring and building simple reports, which can be extracted as a structure or as text with html.
 
 ## Installation
