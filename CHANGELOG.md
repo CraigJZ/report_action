@@ -1,5 +1,5 @@
-## Unreleased
-- Add GitHub action for running the test suite
+## 0.5.0
+- Add GitHub Actions for running the test suite
 
 ## 0.4.0
 - Remove upper limits on development dependencies
