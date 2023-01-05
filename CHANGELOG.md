@@ -1,3 +1,6 @@
+## 0.6.0
+- Ruby 3.2 support
+
 ## 0.5.0
 - Add GitHub Actions for running the test suite
 

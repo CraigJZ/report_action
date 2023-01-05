@@ -1,6 +1,6 @@
 The MIT License (MIT)
 
-Copyright (c) 2022 College of Humanities and Social Sciences, George Mason University
+Copyright (c) 2023 College of Humanities and Social Sciences, George Mason University
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
