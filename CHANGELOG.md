@@ -1,3 +1,8 @@
+## 1.0.0
+- Ruby 3.3 support
+- Drop Ruby 3.0 support (Ruby 3.0 was end of life on 2024-04-23)
+- Drop Ruby 2.7 support (Ruby 2.7 was end of life on 2023-03-31)
+
 ## 0.6.0
 - Ruby 3.2 support
 
