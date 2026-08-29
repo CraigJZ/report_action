@@ -1,3 +1,6 @@
+## 1.2.0
+- Ruby 4 support
+
 ## 1.1.0
 - Ruby 3.4 support
 
